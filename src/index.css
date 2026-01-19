@@ -1,0 +1,46 @@
+:root {
+  --bg-dark: rgba(255, 255, 255, 0.9);
+  /* Lighter, transparent base */
+  --bg-card: rgba(255, 255, 255, 0.8);
+  /* Glass effect for cards */
+  --text-main: #1a1a1a;
+  /* Dark text for readability */
+  --text-muted: #555555;
+  --gold-primary: #D4AF37;
+  --gold-hover: #b5952f;
+  --gold-light: #8a701e;
+  /* Darker gold for text on light bg */
+  --black-overlay: rgba(255, 255, 255, 0.5);
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: transparent;
+  /* Allow background image to show */
+  /* Fallback */
+  color: var(--text-main);
+  background-image: url('./assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}

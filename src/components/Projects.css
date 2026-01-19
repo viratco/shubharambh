@@ -1,0 +1,180 @@
+.projects-section {
+    padding: 100px 0 100px 5%;
+    padding: 100px 0 100px 5%;
+    background: linear-gradient(180deg, rgba(240, 240, 250, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.projects-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.projects-headline {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--gold-light);
+    margin-bottom: 3rem;
+    max-width: 800px;
+}
+
+.projects-carousel {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    padding: 40px 0 60px 0;
+    cursor: grab;
+    position: relative;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    align-items: flex-start;
+}
+
+.projects-carousel::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.projects-carousel:active {
+    cursor: grabbing;
+}
+
+.drag-indicator {
+    position: absolute;
+    top: 150px;
+    left: 390px;
+    background-color: var(--gold-primary);
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    z-index: 10;
+    pointer-events: none;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.project-card {
+    width: 400px;
+    min-width: 400px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Stagger Effect */
+.project-card:nth-child(odd) {
+    margin-top: 0px;
+    /* 2nd card (3rd child) stays up */
+}
+
+.project-card:nth-child(even) {
+    margin-top: 80px;
+    /* 1st card (2nd child) goes down */
+}
+
+.card-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.price-tag {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--gold-primary);
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.card-details {
+    padding: 0 5px;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.project-specs {
+    display: flex;
+    gap: 15px;
+    color: var(--text-muted);
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f5f5f5;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 60px 0 60px 5%;
+        min-height: auto;
+    }
+
+    .projects-headline {
+        font-size: 2rem;
+        padding-right: 20px;
+        margin-bottom: 2rem;
+    }
+
+    .drag-indicator {
+        display: none;
+    }
+
+    .project-card {
+        width: 85vw;
+        min-width: 85vw;
+    }
+
+    .projects-carousel {
+        padding-bottom: 30px;
+    }
+
+    .project-card:nth-child(even),
+    .project-card:nth-child(odd) {
+        margin-top: 0;
+    }
+}
