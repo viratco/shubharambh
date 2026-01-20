@@ -60,4 +60,6 @@ body {
 .content-wrapper {
   position: relative;
   z-index: 1;
+  max-width: 100vw;
+  overflow-x: hidden;
 }

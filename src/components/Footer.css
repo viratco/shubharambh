@@ -1,11 +1,11 @@
 .footer-section {
     width: 100%;
+    max-width: 100vw;
     background-color: white;
-    /* Continue the light blue theme - REMOVED */
     padding-top: 60px;
     display: flex;
     flex-direction: column;
-    /* overflow: hidden; - Removed to prevent clipping on mobile */
+    overflow-x: hidden;
     scroll-snap-align: start;
 }
 
@@ -84,13 +84,14 @@
 
 .footer-hero {
     width: 100%;
+    max-width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 10;
     margin-bottom: -10vw;
-    /* Overlap with the image below slightly */
+    overflow: hidden;
 }
 
 .footer-brand-large {
@@ -168,7 +169,12 @@
     }
 
     .footer-brand-large {
-        font-size: 18vw;
+        font-size: 14vw;
+        letter-spacing: 0;
+    }
+
+    .footer-hero {
+        margin-bottom: -5vw;
     }
 
     .footer-image-container {
