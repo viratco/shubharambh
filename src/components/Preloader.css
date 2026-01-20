@@ -42,3 +42,18 @@
     text-transform: uppercase;
     font-weight: 300;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .preloader-brand {
+        font-size: 2.5rem;
+    }
+
+    .preloader-bar {
+        width: 150px;
+    }
+
+    .preloader-tagline {
+        font-size: 0.8rem;
+    }
+}
