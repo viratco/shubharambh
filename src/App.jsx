@@ -8,8 +8,6 @@ import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import Preloader from './components/Preloader'
 
-import bgImage from './assets/background.png';
-
 function App() {
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -17,20 +15,14 @@ function App() {
     <>
       <Preloader onComplete={() => setIsLoaded(true)} />
       {isLoaded && (
-        <div className="app-wrapper">
-          <div
-            className="fixed-background"
-            style={{ backgroundImage: `url(${bgImage})` }}
-          />
-          <div className="content-wrapper">
-            <Navbar />
-            <Hero />
-            <About />
-            <Projects />
-            <Insights />
-            <FAQ />
-            <Footer />
-          </div>
+        <div>
+          <Navbar />
+          <Hero />
+          <About />
+          <Projects />
+          <Insights />
+          <FAQ />
+          <Footer />
         </div>
       )}
     </>
