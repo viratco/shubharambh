@@ -16,6 +16,7 @@ function App() {
       <Preloader onComplete={() => setIsLoaded(true)} />
       {isLoaded && (
         <div>
+          <div className="fixed-background" />
           <Navbar />
           <Hero />
           <About />

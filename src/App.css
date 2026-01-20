@@ -5,4 +5,20 @@
   text-align: center;
   width: 100%;
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.fixed-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url('./assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
