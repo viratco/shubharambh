@@ -7,15 +7,21 @@ import Insights from './components/Insights'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import Preloader from './components/Preloader'
+import bgImage from './assets/background.png'
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false)
 
   return (
     <>
+      {/* Fixed background for iOS compatibility */}
+      <div
+        className="fixed-bg"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      />
       <Preloader onComplete={() => setIsLoaded(true)} />
       {isLoaded && (
-        <div>
+        <div className="content-wrapper">
           <Navbar />
           <Hero />
           <About />
@@ -30,3 +36,4 @@ function App() {
 }
 
 export default App
+
