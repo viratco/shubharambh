@@ -38,9 +38,8 @@ body {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: transparent;
-  /* Allow background image to show */
-  /* Fallback */
+  background-color: #e8eef5;
+  /* Fallback color for mobile */
   color: var(--text-main);
   background-image: url('./assets/background.png');
   background-size: cover;
@@ -49,4 +48,11 @@ body {
   width: 100%;
   overflow-x: hidden;
   background-attachment: fixed;
+}
+
+/* Fix for iOS/mobile where background-attachment: fixed doesn't work */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
 }
